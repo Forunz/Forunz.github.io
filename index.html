@@ -21,22 +21,22 @@
 
 <body>
     <header id="header">
-        <h1>张几几の蓝色大门</h1>
+        <h1>张几几</h1>
     </header>
     <main id="app">
         <aside>
             <p id="describe">
-                苗条勺子
+                有呼吸就有希望
             </p>
         </aside>
-        <p class="tip">现在总共 b 了 {{count}} 条</p>
+        <p class="tip">至今为止呼吸了 {{count}} 次</p>
         <section class="item" v-for="item in contents" v-cloak>
             <p v-html='item.attributes.content'></p>
             <time v-bind:datetime="item.attributes.time">{{item.attributes.time}}</time>
         </section>
         <div class="load-ctn">
             <button class="load-btn" v-on:click="loadMore" v-if="contents" v-cloak>再翻翻</button>
-            <p class="tip" v-else>别急，加载呢</p>
+            <p class="tip" v-else>别急，深呼吸</p>
         </div>
     </main>
     <footer>
@@ -50,8 +50,8 @@
         Query
     } = AV;
     AV.init({
-        appId:"i6nDiAEaUNGcgtNrvNdfXwKp-MdYXbMMI", //你的 leancloud 应用 id （设置-应用keys-AppID）
-        appKey:"bYB6EbHzvGnYacAgJAF0fcar", //你的 leancloud 应用 AppKey （设置-应用keys-AppKey）
+        appId: "i6nDiAEaUNGcgtNrvNdfXwKp-MdYXbMMI", //你的 leancloud 应用 id （设置-应用keys-AppID）
+        appKey: "h2X4V0IYR6ffs6UfOD1aTMnB", //你的 leancloud 应用 AppKey （设置-应用keys-AppKey）
         
     });
 
